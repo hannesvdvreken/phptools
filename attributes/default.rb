@@ -8,3 +8,5 @@
 #
 
 default['phptools']['install_path'] = '/usr/local/bin'
+
+default['phptools']['tools'] = ['composer', 'phpunit', 'behat', 'codeception']
