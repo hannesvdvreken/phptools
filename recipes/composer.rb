@@ -9,12 +9,7 @@
 
 # install composer if needed
 execute "composer-install" do
-	command "wget http://getcomposer.org/composer.phar && chmod +x composer.phar"
-	creates "#{node['phptools']['install_path']}/composer.phar"
+	command "wget -O composer http://getcomposer.org/composer.phar && chmod +x composer"
+	creates "#{node['phptools']['install_path']}/composer"
 	cwd node['phptools']['install_path']
-end
-
-# easier composer command
-link "#{node['phptools']['install_path']}/composer" do
-	to "#{node['phptools']['install_path']}/composer.phar"
 end

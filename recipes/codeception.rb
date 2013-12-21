@@ -9,12 +9,7 @@
 
 # install codeception
 execute "codecept-install" do
-	command "wget http://codeception.com/codecept.phar && chmod +x codecept.phar"
-	creates "#{node['phptools']['install_path']}/codecept.phar"
+	command "wget -O codecept http://codeception.com/codecept.phar && chmod +x codecept"
+	creates "#{node['phptools']['install_path']}/codecept"
 	cwd node['phptools']['install_path']
-end
-
-# easier codecept command
-link "#{node['phptools']['install_path']}/codecept" do
-	to "#{node['phptools']['install_path']}/codecept.phar"
 end
