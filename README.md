@@ -5,6 +5,8 @@
 - PHPUnit
 - Codeception
 - Composer
+- Behat
+- HHVM
 
 ### PHPUnit
 
@@ -30,6 +32,14 @@ The most important command-line tool for contemporary PHP development. It's like
 $ composer --version
 ```
 
+### Behat
+
+For all your Behavior Driven Development you can now use the `behat` command line tool. Install aditional `behat-mink` extensions with composer for all your needs.
+
+### HHVM (new)
+
+HipHop Virtual Machine is a fast JIT compiler developed by Facebook. Use it as a replacement for PHP-CLI or even use the HHVM FastCGI.
+
 ## Additional info
 
 ### Requirements
@@ -48,7 +58,7 @@ If you want, you can install a subset of these tools by using the recipes
 - phptools::codeception
 - phptools::composer
 
-or a combination.
+Use chef roles to override the `default['phptools']['tools']` array, if you want to.
 
 ## License
 
