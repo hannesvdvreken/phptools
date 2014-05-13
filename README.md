@@ -10,7 +10,7 @@
 
 ### PHPUnit
 
-Installs the PHPUnit PHP Archive file from [source](http://phpunit.de/manual/current/en/installation.html#installation.phar) and provides a link so you can use the following command from the command-line:
+Installs the PHPUnit PHP Archive file from [download](http://phpunit.de/manual/current/en/installation.html#installation.phar) and provides a link so you can use the following command from the command-line:
 
 ```bash
 $ phpunit --version
@@ -18,7 +18,7 @@ $ phpunit --version
 
 ### Codeception
 
-Another PHP tool for test-driven-development. Installs from [source](http://codeception.com/install) and creates a link so you can use it quick:
+Another PHP tool for test-driven-development. Installs from [download](http://codeception.com/install) and creates a link so you can use it quick:
 
 ```bash
 $ codecept --version
@@ -36,9 +36,18 @@ $ composer --version
 
 For all your Behavior Driven Development you can now use the `behat` command line tool. Install aditional `behat-mink` extensions with composer for all your needs.
 
+```bash
+$ behat
+```
+
 ### HHVM (new)
 
-HipHop Virtual Machine is a fast JIT compiler developed by Facebook. Use it as a replacement for PHP-CLI or even use the HHVM FastCGI.
+HipHop Virtual Machine is a fast JIT compiler developed by Facebook. Use it as a replacement for PHP-CLI.
+
+```bash
+$ hhvm --version
+$ php --version
+```
 
 ## Additional info
 
@@ -54,9 +63,11 @@ The default installation path is `/usr/local/bin` because most linux distro's ha
 
 If you want, you can install a subset of these tools by using the recipes
 
-- phptools::phpunit
+- phptools::behat
 - phptools::codeception
 - phptools::composer
+- phptools::hhvm
+- phptools::phpunit
 
 Use chef roles to override the `default['phptools']['tools']` array, if you want to.
 

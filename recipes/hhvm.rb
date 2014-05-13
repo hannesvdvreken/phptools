@@ -12,16 +12,12 @@ apt_repository "hhvm" do
   uri "http://dl.hhvm.com/ubuntu"
   distribution node['lsb']['codename']
   components ["main"]
+  keyserver "keyserver.ubuntu.com"
+  key "1BE7A449"
 end
 
-# Add key file
-execute "import hhvm key" do
-	command "wget -O /tmp/hhvm.gpg.key http://dl.hhvm.com/conf/hhvm.gpg.key && sudo apt-key add /tmp/hhvm.gpg.key"
-	creates "/tmp/hhvm.gpg.key"
-end
-
-# Install fastcgi
-apt_package "hhvm-fastcgi" do
+# Install hhvm
+apt_package "hhvm" do
 	options "--force-yes"
 	action :install
 end

@@ -5,12 +5,8 @@ license          "MIT"
 description      "Install PHP command line tools useful for PHP development."
 version          "1.0.0"
 
-recipe "phptools::phpunit", "Installs the command phpunit from source."
-recipe "phptools::codeception", "Installs the command codecept from source."
-recipe "phptools::composer", "Installs the command composer from source."
-
-attribute "phptools/install_path",
-  :display_name => "Command line tools installation path",
-  :description => "Defines the folder where these tools get installed.",
-  :type => "string",
-  :default => "/usr/local/bin"
+recipe "phptools::behat", "Installs the command behat as a downloadable phar."
+recipe "phptools::codeception", "Installs the command codecept as a downloadable phar."
+recipe "phptools::composer", "Installs the command composer as a downloadable phar."
+recipe "phptools::hhvm", "Installs the hhvm from package repository."
+recipe "phptools::phpunit", "Installs the command phpunit as a downloadable phar."
