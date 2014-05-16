@@ -1,0 +1,6 @@
+ResourceLimit {
+  SocketDefaultTimeout = 30
+}
+Http {
+  SlowQueryThreshold = 30000
+}
